@@ -22,7 +22,7 @@ public class MeshTest : MonoBehaviour
 
     private void OnValidate()
     {
-        if (MeshSettings.VertexSize <= 0 || MeshSettings.VertexSize >= 50)
+        if (MeshSettings.VertexSize <= 0 || MeshSettings.VertexSize >= 100)
             return;
         CreateGrid();
     }
