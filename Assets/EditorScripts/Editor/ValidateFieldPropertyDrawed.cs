@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEditor;
-using NUnit.Framework;
 using System;
 
 [CustomPropertyDrawer(typeof(BaseValidatedField), true)]
