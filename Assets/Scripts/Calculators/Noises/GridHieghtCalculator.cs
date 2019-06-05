@@ -10,11 +10,13 @@ class GridHieghtCalculator : ScriptableObject, IHieghtCalculator
 
     public Vector3[] GetVerteces(Vector3[] vertex, Vector3 basePosition)
     {
+        Debug.Log("GridHieghtCalculator start");
         Vector3[] result = new Vector3[vertex.Length];
         for (int i = 0; i < result.Length; i++)
         {
             result[i] = ModifyVectorZ(vertex[i], basePosition);
         }
+        Debug.Log("GridHieghtCalculator end");
         return result;
 
         Vector3 ModifyVectorZ(Vector3 vector, Vector3 _base)

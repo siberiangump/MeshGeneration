@@ -17,10 +17,7 @@ class GridHieghtCalculatorJobBurst : ScriptableObject, IHieghtCalculator
 
     public Vector3[] GetVerteces(Vector3[] vertex, Vector3 basePosition)
     {
-        Stopwatch.Restart();
         NativeArray<float3> vectors = CreateNativeArrayFrom(vertex);
-        Stopwatch.Stop();
-        Debug.Log("GridHieghtCalculatorJob copy : " + Stopwatch.ElapsedMilliseconds);
         NativeArray<float3> jobResult = new NativeArray<float3>(vectors.Length, Allocator.TempJob);
 
         CalculatorJob jobData = new CalculatorJob

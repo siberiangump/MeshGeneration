@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618c3c6a36b25ff408a96574427c6a72, type: 3}
+  m_Name: MeshMetricSettings
+  m_EditorClassIdentifier: 
+  Sync: {fileID: 11400000, guid: c6d41501172eef741a83be50e37830de, type: 2}
+  Task: {fileID: 11400000, guid: cc44a8281cdc79b41ad453cd669749af, type: 2}
+  Job: {fileID: 11400000, guid: 4afe052f8a1e21f47a06b013f2dc426c, type: 2}
+  JobBurst: {fileID: 11400000, guid: 1d4cc7dd84fd4c546b3c29bfa412028c, type: 2}
+  VertexCalculator: {fileID: 11400000, guid: 04bbafbc83dc38a47bc82e3ffd467148, type: 2}
+  MeshSettings:
+    UnitsSize: 3
+    VertexSize: 10000

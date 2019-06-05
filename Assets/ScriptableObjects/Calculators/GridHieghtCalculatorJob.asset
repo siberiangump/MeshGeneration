@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GridHieghtCalculatorJob
   m_EditorClassIdentifier: 
   Scale: 1
-  Tasks: 3
+  BatchCount: 1
