@@ -70,15 +70,15 @@ public class MeshTest : MonoBehaviour
         MeshFilter.mesh = mesh;
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Mesh mesh = MeshFilter.sharedMesh;
-        float step = (MeshSettings.UnitsSize / MeshSettings.VertexSize) * .1f;
-        for (int i = 0; i < mesh.vertices.Length; i++)
-        {
-            Gizmos.DrawSphere(this.transform.position + mesh.vertices[i], step);
-        }
-    }
+    //private void OnDrawGizmos()
+    //{
+    //    Gizmos.color = Color.red;
+    //    Mesh mesh = MeshFilter.sharedMesh;
+    //    float step = (MeshSettings.UnitsSize / MeshSettings.VertexSize) * .1f;
+    //    for (int i = 0; i < mesh.vertices.Length; i++)
+    //    {
+    //        Gizmos.DrawSphere(this.transform.position + mesh.vertices[i], step);
+    //    }
+    //}
 
 }
