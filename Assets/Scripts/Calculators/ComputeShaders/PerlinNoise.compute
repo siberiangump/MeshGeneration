@@ -1,0 +1,24 @@
+﻿// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+#include "/Includes/Noise.compute"
+
+RWStructuredBuffer<float3> Vertices;
+float3 BasePosition;
+float Scale;
+uint GridSize;
+RWStructuredBuffer<float3> Result;
+
+int indexFromThreadID(uint3 id) {
+    return id.z * GridSize * GridSize + id.y * GridSize + id.x;
+}
+
+[numthreads(8, 8, 1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+	int index = indexFromThreadID(id);
+    float3 point2d;
+    point2d.x = (BasePosition.x + Vertices[index].x) * Scale;
+    point2d.y = (BasePosition.y + Vertices[index].y) * Scale;
+	point2d.z = 0;
+    Result[index] = float3(Vertices[index].x, Vertices[index].y, snoise(point2d));
+}
