@@ -13,12 +13,12 @@ class GridTriangleCalculator: ScriptableObject, ITriangleCalculator
         {
             int i = index / squareAmount;
             int j = index % squareAmount;
-            CreateSquare(i * colums + j, colums, index, index * 6);
+            CreateSquare(i * colums + j, colums, index * 6);
         }
 
         return triangles;
 
-        void CreateSquare(int vertexBaseIndex, int size, int row, int trianglesBaseIndex)
+        void CreateSquare(int vertexBaseIndex, int size, int trianglesBaseIndex)
         {
             triangles[trianglesBaseIndex] = vertexBaseIndex;
             triangles[trianglesBaseIndex + 1] = vertexBaseIndex + 1;

@@ -14,6 +14,7 @@ class GridHieghtCalculatorComputeShader : ScriptableObject, IHieghtCalculator
     private float Scale = 1;
 
     private int CurrenBufferSize = -1;
+    private int treadSize = 64;
 
     public Vector3[] GetVerteces(Vector3[] vertex, Vector3 basePosition)
     {
@@ -23,7 +24,9 @@ class GridHieghtCalculatorComputeShader : ScriptableObject, IHieghtCalculator
         Shader.SetBuffer(0, "Result", Result);
         Shader.SetFloats("BasePosition", basePosition.x, basePosition.y, basePosition.z);
         Shader.SetFloats("Scale", Scale);
-        Shader.Dispatch(0, vertex.Length/3, 1, 1);
+        Shader.SetInt("GridSize", treadSize);
+        int xWaves = vertex.Length / treadSize + (vertex.Length % treadSize > 0 ? 1 : 0);
+        Shader.Dispatch(0, xWaves, 1, 1);
         Vector3[] result = new Vector3[vertex.Length];
         Result.GetData(result, 0, 0, vertex.Length);
         ReleaseBuffers();

@@ -53,6 +53,15 @@ namespace Tests
             yield return null;
         }
 
+        [UnityTest]
+        public IEnumerator TestCompute()
+        {
+            IHieghtCalculator calculator = MeshMetricSettings.GetComputeCalculator();
+            calculator.GetVerteces(Verteces, Vector3.zero);
+            //yield return TestCalculatorAsync(calculator);
+            yield return null;
+        }
+
         private IEnumerator TestCalculatorAsync(IHieghtCalculator calculator)
         {
             (calculator as IAllocatable)?.Allocate(Verteces, Vector3.zero);

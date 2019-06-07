@@ -16,6 +16,7 @@ MonoBehaviour:
   Task: {fileID: 11400000, guid: cc44a8281cdc79b41ad453cd669749af, type: 2}
   Job: {fileID: 11400000, guid: 4afe052f8a1e21f47a06b013f2dc426c, type: 2}
   JobBurst: {fileID: 11400000, guid: 1d4cc7dd84fd4c546b3c29bfa412028c, type: 2}
+  Compute: {fileID: 11400000, guid: 4cd2d850b9e07bb408c0bb255c921cd3, type: 2}
   VertexCalculator: {fileID: 11400000, guid: 04bbafbc83dc38a47bc82e3ffd467148, type: 2}
   MeshSettings:
     UnitsSize: 3
