@@ -1,7 +1,4 @@
-﻿
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Unity.Burst;
+﻿using Unity.Burst;
 using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
@@ -51,7 +48,7 @@ class GridHieghtCalculatorJobBurst : ScriptableObject, IHieghtCalculator
     [BurstCompile]
     public struct CalculatorJob : IJobParallelFor
     {
-        [ReadOnly]
+        //[ReadOnly]
         public NativeArray<float3> Vertices;
         public float3 BasePosition;
         public float Scale;

@@ -12,10 +12,11 @@ int indexFromThreadID(uint3 id) {
     return id.z * GridSize * GridSize + id.y * GridSize + id.x;
 }
 
-[numthreads(8, 8, 1)]
+[numthreads(64, 1, 1)]
 void CSMain (uint3 id : SV_DispatchThreadID)
 {
 	int index = indexFromThreadID(id);
+	//if(Vertices.)
     float3 point2d;
     point2d.x = (BasePosition.x + Vertices[index].x) * Scale;
     point2d.y = (BasePosition.y + Vertices[index].y) * Scale;

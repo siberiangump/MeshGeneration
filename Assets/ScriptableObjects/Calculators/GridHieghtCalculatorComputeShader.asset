@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f106518cb037c6444bbd1bb3947b35b0, type: 3}
   m_Name: GridHieghtCalculatorComputeShader
   m_EditorClassIdentifier: 
-  Shader: {fileID: 0}
+  Shader: {fileID: 7200000, guid: 8e372e49b4879e8409ee8ef6eaa6c29f, type: 3}

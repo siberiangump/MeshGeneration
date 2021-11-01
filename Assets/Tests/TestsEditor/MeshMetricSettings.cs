@@ -9,6 +9,7 @@ public class MeshMetricSettings : ScriptableObject
     [SerializeField, ValidateField(typeof(IHieghtCalculator))] ScriptableObject Task;
     [SerializeField, ValidateField(typeof(IHieghtCalculator))] ScriptableObject Job;
     [SerializeField, ValidateField(typeof(IHieghtCalculator))] ScriptableObject JobBurst;
+    [SerializeField, ValidateField(typeof(IHieghtCalculator))] ScriptableObject Compute;
 
     [SerializeField, ValidateField(typeof(IVertexCalculator))] ScriptableObject VertexCalculator;
 
@@ -18,6 +19,8 @@ public class MeshMetricSettings : ScriptableObject
     public IHieghtCalculator GetTaskCalculator() => Task as IHieghtCalculator;
     public IHieghtCalculator GetJobCalculator() => Job as IHieghtCalculator;
     public IHieghtCalculator GetJobBurstCalculator() => JobBurst as IHieghtCalculator;
+
+    public IHieghtCalculator GetComputeCalculator() => Compute as IHieghtCalculator;
 
     public IVertexCalculator GetVertexCalculator() => VertexCalculator as IVertexCalculator;
 

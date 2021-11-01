@@ -22,12 +22,12 @@ public class MeshTest : MonoBehaviour
 
     private void OnValidate()
     {
-        if (MeshSettings.VertexSize <= 0 || MeshSettings.VertexSize >= 100)
+        if (MeshSettings.VertexSize <= 0 || MeshSettings.VertexSize >= 501)
             return;
         CreateGrid();
     }
 
-    public void Update()
+    public void LateUpdate()
     {
         if (!RecalculateOnUpdate)
             return;
@@ -51,10 +51,10 @@ public class MeshTest : MonoBehaviour
         Mesh oldMesh = MeshFilter.sharedMesh;
         IVertexHieghtCalculator vertexCalculator = VertexCalculator as IVertexHieghtCalculator;
 
-        Stopwatch.Restart();
+        //Stopwatch.Restart();
         Vector3[] newVertices = (HieghtCalculator as IHieghtCalculator).GetVerteces(oldMesh.vertices, this.transform.position);
-        Stopwatch.Stop();
-        Debug.Log("recalculate time" + Stopwatch.ElapsedMilliseconds);
+        //Stopwatch.Stop();
+        //Debug.Log("recalculate time" + Stopwatch.ElapsedMilliseconds);
 
         CreateAndApplyMeshToFilter(
             verteces: newVertices,

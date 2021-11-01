@@ -23,6 +23,7 @@ class GridHieghtCalculatorComputeShader : ScriptableObject, IHieghtCalculator
         Shader.SetBuffer(0, "Result", Result);
         Shader.SetFloats("BasePosition", basePosition.x, basePosition.y, basePosition.z);
         Shader.SetFloats("Scale", Scale);
+        //int threads = 
         Shader.Dispatch(0, vertex.Length/3, 1, 1);
         Vector3[] result = new Vector3[vertex.Length];
         Result.GetData(result, 0, 0, vertex.Length);
